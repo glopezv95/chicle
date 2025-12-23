@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools >= 77.0.3"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "project_name"
+
+# "non backwards compatible API changes.backwards compatible API changes.backwards compatible bug fixes"
+version = "0.1.0"
+
+authors = [
+  { name="Gabriel López Vinielles", email="glopezv95@gmail.com" },
+]
+description = "A short description"
+readme = "README.md"
+
+# >=3.9 if types list, dict, etc are used, >=3.10 if | used for types
+requires-python = ">=3.9"
+
+dependencies = [
+  "required dependencies"
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+license = "MIT"
+license-files = ["LICENSE"]
+
+[project.optional-dependencies]
+dev = [
+  "pytest"
+]
+
+[project.urls]
+Homepage = "https://github.com/pypa/project_name"
+Issues = "https://github.com/pypa/project_name/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
