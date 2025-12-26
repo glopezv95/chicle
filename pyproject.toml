@@ -1,5 +1,5 @@
 [build-system]
-requires = ["setuptools >= 77.0.3"]
+requires = ["setuptools >= 77.0.3", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
@@ -18,7 +18,10 @@ readme = "README.md"
 requires-python = ">=3.9"
 
 dependencies = [
-  "required dependencies"
+  "polars",
+  "fastexcel",
+  "pandas",
+  "pather @ git+https://github.com/glopezv95/pather.git"
 ]
 classifiers = [
     "Programming Language :: Python :: 3",
