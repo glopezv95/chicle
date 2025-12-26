@@ -1,3 +1,4 @@
+from typing import Optional
 import polars as pl
 import pandas as pd
 
@@ -5,9 +6,14 @@ from .types import TypeChicle
 
 class Chicle:
 
-    def __init__(self, data: TypeChicle) -> None:
+    def __init__(
+            self,
+            data: TypeChicle,
+            patterns_header: Optional[dict[str, str]]
+            ) -> None:
         
         self.data = data
+        self.patterns_header = patterns_header
         self.type = type(self.data)
         self.package = self._get_package()
         self.unprocessed_lf = self._get_df()
