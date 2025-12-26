@@ -1,2 +1,2 @@
-# python-pkg-template
-A template for python packages.
+# chicle
+A package to handle data cleaning and standardization. 
